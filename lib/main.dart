@@ -18,4 +18,3 @@ class Logino extends StatelessWidget {
     );
   }
 }
-
