@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:logino/constants.dart';
 
 class FormContent extends StatelessWidget {
   final String name;
   final TextInputType inputType;
   final bool isObscure;
+  final Color formBackgroundColor , hintTextColor , borderColor;
 
   const FormContent({
     super.key,
     required this.name,
     required this.inputType,
-    required this.isObscure,
+    required this.isObscure, required this.formBackgroundColor, required this.hintTextColor, required this.borderColor,
   });
 
   @override
@@ -18,17 +20,21 @@ class FormContent extends StatelessWidget {
       keyboardType: inputType,
       obscureText: isObscure,
       decoration: InputDecoration(
-        fillColor: const Color(0xffE4E4E4),
+        fillColor: formBackgroundColor,
         filled: true,
         hintText: name,
-        helperStyle: const TextStyle(
-          color: Colors.black26,
+        hintStyle: TextStyle(
+          color: hintTextColor,
         ),
-        border: OutlineInputBorder(
-          borderSide: const BorderSide(color: Colors.black26),
-          borderRadius: BorderRadius.circular(10),
+        enabledBorder: defaultInputBorder.copyWith(
+          borderSide: BorderSide(color: borderColor,
         ),
+        ),
+        focusedBorder: defaultInputBorder.copyWith(
+    borderSide: BorderSide(color: borderColor,
+    ),
       ),
+    ),
     );
   }
 }

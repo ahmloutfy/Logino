@@ -3,9 +3,10 @@ import 'package:flutter/material.dart';
 class TextButtonsContent extends StatelessWidget {
 
   final String text;
+  final Color clickableTextColor;
 
   const TextButtonsContent({
-    super.key, required this.text,
+    super.key, required this.text, required this.clickableTextColor,
   });
 
   @override
@@ -14,9 +15,9 @@ class TextButtonsContent extends StatelessWidget {
       onPressed: () {},
       child: Text(
         text,
-        style: const TextStyle(
+        style: TextStyle(
           decoration: TextDecoration.underline,
-          color: Color(0xff4C505B),
+          color: clickableTextColor,
           fontSize: 20,
         ),
       ),

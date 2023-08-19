@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:logino/screens/home_login.dart';
+import 'package:logino/screens/home_logup.dart';
 
 void main() {
   runApp(const Logino());
@@ -14,7 +14,7 @@ class Logino extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Logino',
-      home: HomeLogin(),
+      home: HomeLogup(),
     );
   }
 }

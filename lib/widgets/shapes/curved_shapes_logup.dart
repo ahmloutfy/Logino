@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class CurvedShapes extends StatelessWidget {
-  const CurvedShapes({super.key});
+class CurvedShapesLogup extends StatelessWidget {
+  const CurvedShapesLogup({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +17,7 @@ class CurvedShapes extends StatelessWidget {
               top: 230,
               right: 230,
               child: Text(
-                'Welcome \nBack',
+                'Create \nAccount',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 35,
@@ -36,20 +36,6 @@ class CurvedShapes extends StatelessWidget {
 class SampleShape extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
-    Paint orangePaint = Paint()
-      ..color = const Color(0xffF4AC46)
-      ..style = PaintingStyle.fill;
-
-    Path orangeShape = Path()
-      ..moveTo(0, size.height * 0.25)
-      ..quadraticBezierTo(size.width * 0.15, size.height * 0.24,
-          size.width * 0.15, size.height * 0.15)
-      ..quadraticBezierTo(size.width * 0.15, size.height * 0.05,
-          size.width * 0.35, size.height * 0.05)
-      ..quadraticBezierTo(
-          size.width * 0.45, size.height * 0.05, size.width * 0.55, 0)
-      ..lineTo(0, 0)
-      ..close();
 
     Paint blackPaint = Paint()
       ..color = const Color(0xff383F49)
@@ -73,16 +59,16 @@ class SampleShape extends CustomPainter {
       ..style = PaintingStyle.fill;
 
     Path blueShape = Path()
-      ..moveTo(size.width * 0.63, size.height * 0.32)
-      ..quadraticBezierTo(
-          size.width * 0.73, size.height * 0.45, size.width, size.height * 0.42)
-      ..lineTo(size.width, 0)
+..lineTo(0, size.height)
+      ..lineTo(size.width / 2, size.height)
+      ..cubicTo(size.width * 0.6, size.height * 0.8, size.width * 0.9, size.height * 0.8, size.width, size.height * 0.8)
+
+    ..lineTo(size.width, 0)
       ..lineTo(0, 0)
       ..close();
 
     canvas.drawPath(blueShape, bluePaint);
     canvas.drawPath(blackShape, blackPaint);
-    canvas.drawPath(orangeShape, orangePaint);
   }
 
   @override
