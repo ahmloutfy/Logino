@@ -14,7 +14,7 @@ class CurvedShapesLogup extends StatelessWidget {
         child: const Stack(
           children: [
             Positioned(
-              top: 230,
+              top: 135,
               right: 230,
               child: Text(
                 'Create \nAccount',
@@ -43,13 +43,11 @@ class SampleShape extends CustomPainter {
       ..strokeWidth = 2.5;
 
     Path blackShape = Path()
-      ..moveTo(0, size.height * 0.36)
-      ..quadraticBezierTo(size.width * 0.5, size.height * 0.5,
-          size.width * 0.65, size.height * 0.30)
-      ..quadraticBezierTo(size.width * 0.73, size.height * 0.18,
-          size.width * 0.90, size.height * 0.15)
-      ..quadraticBezierTo(
-          size.width * 0.97, size.height * 0.14, size.width, size.height * 0.12)
+      ..moveTo(0, size.height * 0.37)
+      ..quadraticBezierTo(size.width * 0.27, size.height * 0.27,
+          size.width * 0.5, size.height * 0.28)
+      ..quadraticBezierTo(size.width * 0.73, size.height * 0.29,
+          size.width, size.height * 0.2)
       ..lineTo(size.width, 0)
       ..lineTo(0, 0)
       ..close();
@@ -61,8 +59,7 @@ class SampleShape extends CustomPainter {
     Path blueShape = Path()
 ..lineTo(0, size.height)
       ..lineTo(size.width / 2, size.height)
-      ..cubicTo(size.width * 0.6, size.height * 0.8, size.width * 0.9, size.height * 0.8, size.width, size.height * 0.8)
-
+      ..cubicTo(size.width * 0.55, size.height * 0.75, size.width * 0.8, size.height * 0.85, size.width, size.height * 0.7)
     ..lineTo(size.width, 0)
       ..lineTo(0, 0)
       ..close();

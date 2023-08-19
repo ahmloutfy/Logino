@@ -34,6 +34,10 @@ class HomeLogup extends StatelessWidget {
                               formBackgroundColor: Color(0xff58BEE6),
                               hintTextColor: Colors.white,
                               borderColor: Colors.white,
+                              typingCursorColor: Colors.white,
+                              actionOfInput: TextInputAction.next,
+                              userInputColor: Colors.white,
+
                             ),
                             SizedBox(
                               height: 25,
@@ -45,6 +49,9 @@ class HomeLogup extends StatelessWidget {
                               formBackgroundColor: Color(0xff58BEE6),
                               hintTextColor: Colors.white,
                               borderColor: Colors.white,
+                                typingCursorColor: Colors.white,
+                              actionOfInput: TextInputAction.next,
+                              userInputColor: Colors.white,
                             ),
                             SizedBox(
                               height: 25,
@@ -56,6 +63,9 @@ class HomeLogup extends StatelessWidget {
                               formBackgroundColor: Color(0xff58BEE6),
                               hintTextColor: Colors.white,
                               borderColor: Colors.white,
+                                typingCursorColor: Colors.white,
+                              actionOfInput: TextInputAction.done,
+                              userInputColor: Colors.white,
                             ),
                           ],
                         ),

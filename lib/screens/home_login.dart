@@ -9,7 +9,6 @@ class HomeLogin extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.white,
@@ -25,25 +24,37 @@ class HomeLogin extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 45),
                   child: Column(
                     children: [
-                  const Form(
-                  child: Column(
-                  children: [
-                    FormContent(
-                    name: 'Email',
-                    inputType: TextInputType.emailAddress,
-                    isObscure: false, formBackgroundColor: Color(0xffE4E4E4), hintTextColor: Colors.black26, borderColor: Colors.black26,
-                  ),
-                  SizedBox(
-                    height: 25,
-                  ),
-                  FormContent(
-                    name: 'Password',
-                    inputType: TextInputType.visiblePassword,
-                    isObscure: true, formBackgroundColor: Color(0xffE4E4E4), hintTextColor: Colors.black26, borderColor: Colors.black26,
-                  ),
-                  ],
-                ),
-              ),
+                      const Form(
+                        child: Column(
+                          children: [
+                            FormContent(
+                              name: 'Email',
+                              inputType: TextInputType.emailAddress,
+                              isObscure: false,
+                              formBackgroundColor: Color(0xffE4E4E4),
+                              hintTextColor: Colors.black26,
+                              borderColor: Colors.black26,
+                              typingCursorColor: Colors.black26,
+                              actionOfInput: TextInputAction.next,
+                              userInputColor: Colors.black26,
+                            ),
+                            SizedBox(
+                              height: 25,
+                            ),
+                            FormContent(
+                              name: 'Password',
+                              inputType: TextInputType.visiblePassword,
+                              isObscure: true,
+                              formBackgroundColor: Color(0xffE4E4E4),
+                              hintTextColor: Colors.black26,
+                              borderColor: Colors.black26,
+                              typingCursorColor: Colors.black26,
+                              actionOfInput: TextInputAction.done,
+                              userInputColor: Colors.black26,
+                            ),
+                          ],
+                        ),
+                      ),
                       const SizedBox(
                         height: 30,
                       ),
@@ -57,12 +68,14 @@ class HomeLogin extends StatelessWidget {
                       ),
                       const Row(
                         children: [
-                          TextButtonsContent(text: 'Sign Up',
-                          clickableTextColor: Colors.black,
+                          TextButtonsContent(
+                            text: 'Sign Up',
+                            clickableTextColor: Colors.black,
                           ),
                           Spacer(),
-                          TextButtonsContent(text: 'Forgot Password',
-                          clickableTextColor: Color(0xff4C505B),
+                          TextButtonsContent(
+                            text: 'Forgot Password',
+                            clickableTextColor: Color(0xff4C505B),
                           ),
                         ],
                       )
@@ -77,10 +90,3 @@ class HomeLogin extends StatelessWidget {
     );
   }
 }
-
-
-
-
-
-
-
